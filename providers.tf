@@ -9,15 +9,14 @@ terraform {
   required_providers {
     tfe = {
       source  = "hashicorp/tfe"
-      version = "0.52.0"
+      version = "~> 0.52.0"
     }
   }
+
+  required_version = "~> 1.7.5"
+
 }
 
 provider "tfe" {
-    token = var.tfe_token
-}
-
-provider "github" {
-  #  token = var.github_token
+  token = var.tfe_token
 }
